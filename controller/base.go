@@ -1,7 +1,7 @@
 package controllers
 
 import (
-	structs "assigment2/struct"
+	structs "assigment2/structs"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -39,7 +39,7 @@ func (idb *InDB) CreateOrder(c *gin.Context) {
 }
 
 func (idb *InDB) UpdateOrder(c *gin.Context) {
-	customer_name := c.PostForm("Customer_Name")
+	customer_name := c.PostForm("CustomerName")
 	var (
 		order    structs.Order
 		newOrder structs.Order
@@ -52,7 +52,7 @@ func (idb *InDB) UpdateOrder(c *gin.Context) {
 		}
 	}
 
-	newOrder.Customer_name = customer_name
+	newOrder.CustomerName = customer_name
 	order, err = idb.Orderepository.Update(order)
 	if err != nil {
 		result = gin.H{

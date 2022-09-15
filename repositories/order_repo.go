@@ -1,7 +1,7 @@
 package repositories
 
 import (
-	structs "assigment2/struct"
+	structs "assigment2/structs"
 	"fmt"
 
 	"gorm.io/gorm"
