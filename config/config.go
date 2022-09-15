@@ -1,7 +1,7 @@
 package config
 
 import (
-	structs "assigment2/struct"
+	structs "assigment2/structs"
 	"fmt"
 
 	"gorm.io/driver/mysql"
